@@ -6,6 +6,17 @@
 
 This assignment requires you to create a Java application that will be used to inventory mowers in a mower store.  In addition to the classes that store the mower data, you will create a GUI to manage the inventory.
 
+## Git and GitHub
+
+You will submit this project using GitHub pull requests. You **must** create a GitHub pull request for each level to receive credit. You should request your assigned reviewer on your pull request. Review the following resource on git and GitHub for major programs _before_ you start work:
+
+- [Written Explanation](https://gist.github.com/ccannon94/511115be821a873ae9ec5f4db9cfdda0)
+- [YouTube Video](https://www.youtube.com/watch?v=l2bP9JKQkdA)
+
+You **must** complete all work on a separate branch. You CAN NOT push code to the master branch. Review the above git and GitHub resources to learn about branching.
+
+You **must** add your assigned TA as a reviewer for your pull requests. You can find your assigned reviewer [here](./assigned-reviewers.csv). **Reviewer assignments have changed since MP1 so please check this document again**.
+
 ## UML Domain Diagram
 
 ![Major Program UML Domain Diagram](https://github.com/NCATCS/Spring2019-MP2/blob/master/img/UMLDiagram.png)
@@ -58,12 +69,34 @@ Each ArrayList should have five associated methods to perform: getNum, add, remo
 +removeWidget( index:int ) : Widget  //remove and return the Widget at location index
 ```
 
+### toString() Methods
+
+The `toString()` method for _each_ concrete subclass of `Mower` must include a letter designating the subtype. "L" for `LawnTractor`, "C" for `CommercialMower`, "G" for `GasPoweredMower` and "P" for `PushReelMower`. This should be the first line after the `serialNumber` as shown in the input file format below.
+
+Properties should be returned in the order they are listed in the UML diagram, from superclass to subclass.
+
 ## Input File
 
 The name of the input file will be supplied using command-line arguments.  If no command-line argument is supplied, then your program should prompt the user for the input file using the `JFileChooser` class.  Here is the format of the input file:
 
 ```
-//TODO: Input file format here
+storeName
+mower0Manufacturer
+mower0Year
+mower0SerialNumber
+mower0SubClassType
+mower0SubClassProperties
+mower1Manufacturer
+mower1Year
+mower1SerialNumber
+mower1SubClassType
+mower1SubClassProperties
+...
+mowerNManufacturer
+mowerNYear
+mowerNSerialNumber
+mowerNSubClassType
+mowerNSubClassProperties
 ```
 
 ## Output File
