@@ -105,7 +105,7 @@ The format for the output file should be identical to that of the input file.  I
 
 ## Graphical User Interface
 
-If you would like to add a GUI to your application, look for the GUI addendum.  It will be posted later in the same folder as this assignment.  You should not attempt this portion of the assignment if you have not completed the other classes.
+If you would like to add a GUI to your application, look for the [GUI addendum](./gui-addendum.md).  It will be posted later in the same folder as this assignment.  You should not attempt this portion of the assignment if you have not completed the other classes.
 
 ## Grading
 
@@ -121,4 +121,4 @@ Implement the `MowerWareHouse` class except the `readMowerData()` and `saveMower
 Modify your main so that it uses command-line arguments to provide the input file name.  Add the logic to obtain the input file name from a `JFileChooser` if no command-line argument is provided.  Implement the `readMowerData()` and `saveMowerData()` methods.   To prove your code works, read the input file and add additional mowers by creating objects in the main method and adding them to the `MowerWareHouse` object.  Save the updated `MowerWareHouse` object using the `saveMowerData()` method.
 
 ###Level 4 (15 points)
-Implement the GUI.  See the GUI addendum for details
+Implement the GUI.  See the [GUI addendum](./gui-addendum.md) for details
