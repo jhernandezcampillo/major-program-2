@@ -66,5 +66,15 @@ public class Engine {
     public void setCylinders(int cylinders) {
         this.cylinders = cylinders;
     }
-    
+
+    /**
+     *
+     * @return
+     */
+    @Override 
+    public String toString(){
+        String nl = System.lineSeparator();
+        return manufacturer + nl + horsePower + nl + cylinders;
+        
+    }
 }
