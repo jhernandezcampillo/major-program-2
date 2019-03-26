@@ -61,5 +61,9 @@ public class LawnTractor {
     public void setDeckWidth(double deckWidth) {
         this.deckWidth = deckWidth;
     }
-    
+    @Override
+    public String toString(){
+      String nl = System.lineSeparator();
+      return engine + nl + model + nl + deckWidth;
+    }
 }
