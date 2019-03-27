@@ -63,10 +63,25 @@ public class MajorPro2 {
         
         MowerWareHouse ware = new MowerWareHouse();
         
+        ware.addMower(como);
+        ware.addMower(gas);
+        ware.addMower(lawn);
+        ware.addMower(push);
+        
+        //tostring test
         String out = como.toString() + gas.toString() + lawn.toString()
                 + push.toString();
         
         JOptionPane.showMessageDialog(null, out);
+        
+        String mowerObjects = "";
+        
+        //array list population test
+        for (int i = 0; i < ware.getNumMowers(); i++) {
+            mowerObjects += ware.getMower(i).toString();
+        }
+        
+        JOptionPane.showMessageDialog(null, mowerObjects);
         
         //System.out.println(como.toString());
         //System.out.println(gas.toString());
