@@ -69,6 +69,13 @@ public class MajorPro2 {
         
         JOptionPane.showMessageDialog(null, out);
         
+        
+        //String mowerObjects ="";
+        //for (int i = 0; i < ware.getNumMowers(); i++) {
+        //    mowerObjects += ware.getMower(i).toString();
+        //}
+        
+        
         //System.out.println(como.toString());
         //System.out.println(gas.toString());
         //System.out.println(lawn.toString());
