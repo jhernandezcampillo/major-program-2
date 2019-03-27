@@ -74,7 +74,7 @@ public class Engine {
     @Override 
     public String toString(){
         String nl = System.lineSeparator();
-        return manufacturer + nl + horsePower + nl + cylinders;
+        return manufacturer + nl + horsePower + nl + cylinders + nl;
         
     }
 }

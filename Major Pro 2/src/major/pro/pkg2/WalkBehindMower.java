@@ -9,7 +9,7 @@ package major.pro.pkg2;
  *
  * @author Judith
  */
-public abstract class WalkBehindMower {
+public abstract class WalkBehindMower extends Mower {
     private double cutWidth;
     private double wheelDiameter;
     
@@ -48,6 +48,6 @@ public abstract class WalkBehindMower {
     @Override
     public String toString(){
       String nl = System.lineSeparator();
-      return cutWidth + nl + wheelDiameter;
+      return super.toString() + cutWidth + nl + wheelDiameter + nl;
     }
 }

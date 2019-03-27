@@ -9,7 +9,7 @@ package major.pro.pkg2;
  *
  * @author Judith
  */
-public class LawnTractor {
+public class LawnTractor extends Mower {
     private Engine engine;
     private String model;
     private double deckWidth;
@@ -64,6 +64,6 @@ public class LawnTractor {
     @Override
     public String toString(){
       String nl = System.lineSeparator();
-      return engine + nl + model + nl + deckWidth;
+      return super.toString()+ engine.toString() + nl + model + nl + deckWidth + nl;
     }
 }

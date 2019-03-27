@@ -75,6 +75,6 @@ public abstract class Mower {
     
    public String toString(){
        String nl = System.lineSeparator();
-       return manufacturer + nl + year + nl + serialNumber;
+       return manufacturer + nl + year + nl + serialNumber + nl;
    }
 }

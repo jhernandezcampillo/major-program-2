@@ -9,7 +9,7 @@ package major.pro.pkg2;
  *
  * @author Judith
  */
-public class GasPoweredMower {
+public class GasPoweredMower extends WalkBehindMower{
 
     private Engine engine;
     private boolean selfPropelled;
@@ -49,6 +49,6 @@ public class GasPoweredMower {
     @Override
     public String toString(){
         String nl = System.lineSeparator();
-        return engine + nl + selfPropelled;
+        return engine.toString() + nl + selfPropelled + nl;
     }
 }

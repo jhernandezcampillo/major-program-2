@@ -9,7 +9,7 @@ package major.pro.pkg2;
  *
  * @author Judith
  */
-public class PushReelMower {
+public class PushReelMower extends WalkBehindMower{
     private int numWheels;
     
     public PushReelMower(){

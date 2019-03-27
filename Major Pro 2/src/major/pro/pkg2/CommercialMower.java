@@ -9,7 +9,7 @@ package major.pro.pkg2;
  *
  * @author Judith
  */
-public class CommercialMower {
+public class CommercialMower extends LawnTractor{
     private double operatingHours;
     private boolean zeroTurnRadius;
     
@@ -48,6 +48,6 @@ public class CommercialMower {
     @Override
     public String toString(){
         String nl = System.lineSeparator();
-        return operatingHours + nl + zeroTurnRadius; 
+        return operatingHours + nl + zeroTurnRadius + nl; 
     }
 }
