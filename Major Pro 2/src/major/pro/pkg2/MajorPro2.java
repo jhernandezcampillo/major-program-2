@@ -5,6 +5,7 @@
  */
 package major.pro.pkg2;
 
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
@@ -17,7 +18,7 @@ public class MajorPro2 {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
         // TODO code application logic here
         Engine eng = new Engine("John", 2.0, 3);
         CommercialMower como = new CommercialMower(9.8, true );
@@ -72,6 +73,12 @@ public class MajorPro2 {
         //System.out.println(gas.toString());
         //System.out.println(lawn.toString());
         //System.out.println(push.toString());
+        
+       String file = args[0];
+       MowerWareHouse mwh = new MowerWareHouse(); 
+       mwh.readMowerData(file);
+       //JOptionPane.showMessageDialog(null, de.toString());
+       mwh.saveMowerData(".txt");
     }
     
 }
