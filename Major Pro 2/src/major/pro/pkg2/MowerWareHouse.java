@@ -111,36 +111,38 @@ public class MowerWareHouse {
             setStoreName(scan.nextLine());
             while (scan.hasNext()) {
                 String manu = scan.nextLine();
-                int year = scan.nextInt();
+                int year =Integer.parseInt(scan.next().trim());
                 scan.nextLine();
                 String serNum = scan.nextLine();
-                String sub = scan.nextLine();
+                String sub = scan.nextLine().trim();
                 
-                if (sub == "L") {
+                if (sub.equals("L")) {
                     LawnTractor lawn = new LawnTractor();
                     setMower(lawn, manu, year, serNum, sub);
                     Engine e = new Engine();
                     setEngine(e, scan.nextLine(), scan.nextDouble(), scan.nextInt());
                     scan.nextLine();
                     lawn.setEngine(e);
-                    setLawnTractor(lawn, scan.nextLine(), scan.nextDouble());
-                    if (scan.hasNext()) {
-                        scan.nextLine();
-                    }
+                    setLawnTractor(lawn, scan.nextLine(), Double.parseDouble(scan.nextLine()));
+                    //if (scan.hasNext()) {
+                    //    scan.nextLine();
+                    //}
                 }
-                if (sub == "C") {
+                if (sub.equals("C")) {
                     CommercialMower c = new CommercialMower();
                     setMower(c, manu, year, serNum, sub);
                     Engine e = new Engine();
                     setEngine(e, scan.nextLine(), scan.nextDouble(), scan.nextInt());
                     scan.nextLine();
                     c.setEngine(e);
-                    setLawnTractor(c, scan.nextLine(), scan.nextDouble());
-                    if (scan.hasNext()) {
-                        scan.nextLine();
-                    }
+                    setLawnTractor(c, scan.nextLine(), Double.parseDouble(scan.nextLine().trim()));
+                    c.setOperatingHours(Double.parseDouble(scan.nextLine()));
+                    c.setZeroTurnRadius(Boolean.parseBoolean(scan.nextLine()));
+                    //if (scan.hasNext()) {
+                    //    scan.nextLine();
+                    //}
                 }
-                if (sub == "G") {
+                if (sub.equals("G")) {
                     GasPoweredMower g = new GasPoweredMower();
                     setMower(g, manu, year, serNum, sub);
                     setWalkBehindMower(g, scan.nextDouble(), scan.nextDouble());
@@ -149,13 +151,13 @@ public class MowerWareHouse {
                     setEngine(e, scan.nextLine(), scan.nextDouble(), scan.nextInt());
                     scan.nextLine();
                     g.setEngine(e);
-                    g.setSelfPropelled(scan.nextBoolean());
-                    if (scan.hasNext()) {
-                        scan.nextLine();
-                    }
+                    g.setSelfPropelled(Boolean.parseBoolean(scan.nextLine().trim()));
+                    //if (scan.hasNext()) {
+                    //    scan.nextLine();
+                    //}
                     
                 }
-                if (sub == "P") {
+                if (sub.equals("P")) {
                     PushReelMower p = new PushReelMower();
                     setMower(p, manu, year, serNum, sub);
                     setWalkBehindMower(p, scan.nextDouble(), scan.nextDouble());

@@ -78,7 +78,7 @@ public class MajorPro2 {
        MowerWareHouse mwh = new MowerWareHouse(); 
        mwh.readMowerData(file);
        //JOptionPane.showMessageDialog(null, de.toString());
-       mwh.saveMowerData(".txt");
+       mwh.saveMowerData("output.txt");
     }
     
 }
