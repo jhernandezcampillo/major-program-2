@@ -17,6 +17,10 @@ public class CommercialMower extends LawnTractor{
         operatingHours = 0.0;
         zeroTurnRadius = false;
     }
+    public CommercialMower(double opHour, boolean zero){
+        operatingHours = opHour;
+        zeroTurnRadius = zero;
+    }
 
     /**
      * @return the operatingHours
@@ -48,6 +52,6 @@ public class CommercialMower extends LawnTractor{
     @Override
     public String toString(){
         String nl = System.lineSeparator();
-        return operatingHours + nl + zeroTurnRadius + nl; 
+        return super.toString()+ operatingHours + nl + zeroTurnRadius + nl; 
     }
 }

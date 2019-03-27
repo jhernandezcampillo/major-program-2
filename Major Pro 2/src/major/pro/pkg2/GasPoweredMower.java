@@ -18,6 +18,10 @@ public class GasPoweredMower extends WalkBehindMower{
         engine = null;
         selfPropelled = false;
     }
+    public GasPoweredMower(Engine eng, boolean self){
+        engine = eng;
+        selfPropelled = self;
+    }
 
     /**
      * @return the engine
@@ -49,6 +53,6 @@ public class GasPoweredMower extends WalkBehindMower{
     @Override
     public String toString(){
         String nl = System.lineSeparator();
-        return engine.toString() + nl + selfPropelled + nl;
+        return super.toString() + engine.toString() + selfPropelled + nl;
     }
 }

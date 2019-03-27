@@ -19,6 +19,11 @@ public class LawnTractor extends Mower {
         model = "";
         deckWidth = 0.0;
     }
+    public LawnTractor(Engine e, String s, double d){
+        engine = e;
+        model = s;
+        deckWidth = d;
+    }
 
     /**
      * @return the engine
@@ -64,6 +69,6 @@ public class LawnTractor extends Mower {
     @Override
     public String toString(){
       String nl = System.lineSeparator();
-      return super.toString()+ engine.toString() + nl + model + nl + deckWidth + nl;
+      return super.toString()+ engine.toString() + model + nl + deckWidth + nl;
     }
 }

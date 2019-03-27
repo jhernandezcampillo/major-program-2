@@ -15,6 +15,9 @@ public class PushReelMower extends WalkBehindMower{
     public PushReelMower(){
         numWheels = 0;
     }
+    public PushReelMower(int num){
+        numWheels = num;
+    }
 
     /**
      * @return the numWheels
@@ -32,6 +35,6 @@ public class PushReelMower extends WalkBehindMower{
     @Override
     public String toString(){
         String nl = System.lineSeparator();
-        return numWheels + nl;
+        return super.toString() + numWheels + nl;
     }
 }
