@@ -13,6 +13,7 @@ public abstract class Mower {
    private String manufacturer;
    private int year;
    private String serialNumber;
+   private String subtype;
    
    public Mower(){
        manufacturer = "";
@@ -71,10 +72,16 @@ public abstract class Mower {
      *
      * @return
      */
+    public String getSubtype(){
+        return subtype;
+    }
+    public void setSubtype(String subtype){
+        this.subtype = subtype;
+    }
     @Override 
     
    public String toString(){
        String nl = System.lineSeparator();
-       return manufacturer + nl + year + nl + serialNumber + nl;
+       return manufacturer + nl + year + nl + serialNumber + nl + subtype + nl;
    }
 }

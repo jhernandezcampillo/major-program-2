@@ -27,6 +27,7 @@ public class MajorPro2 {
         como.setDeckWidth(3.3);
         como.setYear(1998);
         como.setSerialNumber("43985983");
+        como.setSubtype("C"); 
         
         LawnTractor lawn = new LawnTractor(eng, "Deere", 9.9);
         lawn.setEngine(eng);
@@ -35,6 +36,7 @@ public class MajorPro2 {
         lawn.setDeckWidth(3.3);
         lawn.setYear(1998);
         lawn.setSerialNumber("43985983");
+        lawn.setSubtype("L"); 
         
         GasPoweredMower gas = new GasPoweredMower(eng, true);
         gas.setCutWidth(6.7);
@@ -42,6 +44,7 @@ public class MajorPro2 {
         gas.setSerialNumber("4523653645");
         gas.setYear(1997);
         gas.setWheelDiameter(3.4);
+        gas.setSubtype("G");
         
         PushReelMower push = new PushReelMower(4);
         push.setCutWidth(3.6);
@@ -49,6 +52,7 @@ public class MajorPro2 {
         push.setWheelDiameter(6.3);
         push.setYear(1993);
         push.setSerialNumber("53896675");
+        push.setSubtype("P");
 
         ArrayList<Mower> mowers = new ArrayList<Mower>();
         mowers.add(como);
